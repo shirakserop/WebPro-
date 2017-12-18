@@ -27,6 +27,8 @@ particale.prototype.draw = function(){
     // c.fillRect(this.x,this.y,this.radius,this.radius);
     c.strokeStyle = this.color;
     c.strokeRect(this.x,this.y,this.radius,this.radius);
+    c.strokeStyle = "red ";
+    c.strokeText("text",this.x,this.y);
 }
 
 particale.prototype.update = function (){
