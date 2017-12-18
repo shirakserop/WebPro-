@@ -31,7 +31,7 @@ particale.prototype.draw = function(){
 particale.prototype.update = function (){
 
   if(life > maxLife){
-      life = 0;
+      life = 1;
   }
 
   this.x += this.vx;
