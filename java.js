@@ -49,9 +49,8 @@ function add_circle(x,y,radius){
   this.x = x;
   this.y = y;
   this.vx = 0.05;
-  this.vy = 0.05; 
+  this.vy = 0.05;
   this.radius= radius;
-
 
   this.draw = function(){
     c.beginPath();
@@ -61,10 +60,8 @@ function add_circle(x,y,radius){
   }
 
   this.update = function(){
-
     this.x += this.vx;
     this.y += this.vy;
-
     this.draw();
   }
 
@@ -77,12 +74,10 @@ function add_circle(x,y,radius){
 
 
      setInterval(function(){
-
-
           c.clearRect(0,0,W,H);
           var add_circles = [];
           var circles = [];
-      for (var j = 0; j < 200; j++) {
+         for (var j = 0; j < 200; j++) {
            var x = Math.random() *  W;
            var y = Math.random() * H;
            var radius = 20;
@@ -90,26 +85,24 @@ function add_circle(x,y,radius){
 
            var circle = new particale(x,y,radius,color);
            circles.push(circle);
-       }
+         }
 
          for(var i=0; i < 100; i++){
-
            var x,y,radius,add_circleO;
            x = Math.random() * W;
            y = Math.random() * H;
            radius = Math.random() * 8 ;
            add_circleO = new add_circle(x,y,radius);
-
-                add_circles.push(add_circleO);
+           add_circles.push(add_circleO);
          }
 
-    for(var k = 0; k < add_circles.length; k++){
-        add_circles[k].update();
-    }
+        for(var k = 0; k < add_circles.length; k++){
+           add_circles[k].update();
+         }
 
 
-     for (var i = 0; i < circles.length; i++) {
-       circles[i].update();
-     }
+        for (var i = 0; i < circles.length; i++) {
+          circles[i].update();
+        }
 
    },60);
