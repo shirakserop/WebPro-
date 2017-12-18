@@ -23,9 +23,10 @@ function particale (x,y,radius,color){
 }
 
 particale.prototype.draw = function(){
-    c.fillStyle = this.color;
-    c.fillRect(this.x,this.y,this.radius,this.radius);
-
+    // c.fillStyle = this.color;
+    // c.fillRect(this.x,this.y,this.radius,this.radius);
+    c.strokeStyle = this.color;
+    c.strokeRect(this.x,this.y,this.radius,this.radius);
 }
 
 particale.prototype.update = function (){
